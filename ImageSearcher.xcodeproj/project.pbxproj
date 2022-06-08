@@ -14,6 +14,8 @@
 		063F196328510753004E572E /* ImageSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F196228510753004E572E /* ImageSearcherTests.swift */; };
 		063F19812851082A004E572E /* ImageSearcherHit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19802851082A004E572E /* ImageSearcherHit.swift */; };
 		063F198428513421004E572E /* ImageSearcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F198328513421004E572E /* ImageSearcherResult.swift */; };
+		063F198B28513834004E572E /* ImageSearcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F198A28513834004E572E /* ImageSearcherView.swift */; };
+		063F198D28513961004E572E /* NavConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F198C28513961004E572E /* NavConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		063F196228510753004E572E /* ImageSearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherTests.swift; sourceTree = "<group>"; };
 		063F19802851082A004E572E /* ImageSearcherHit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherHit.swift; sourceTree = "<group>"; };
 		063F198328513421004E572E /* ImageSearcherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherResult.swift; sourceTree = "<group>"; };
+		063F198A28513834004E572E /* ImageSearcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherView.swift; sourceTree = "<group>"; };
+		063F198C28513961004E572E /* NavConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		063F197C2851075F004E572E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				063F198728513800004E572E /* ImageSearcherView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 		063F197E2851076E004E572E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				063F198C28513961004E572E /* NavConfigurator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +155,14 @@
 				063F198328513421004E572E /* ImageSearcherResult.swift */,
 			);
 			path = ImageSearcherResult;
+			sourceTree = "<group>";
+		};
+		063F198728513800004E572E /* ImageSearcherView */ = {
+			isa = PBXGroup;
+			children = (
+				063F198A28513834004E572E /* ImageSearcherView.swift */,
+			);
+			path = ImageSearcherView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,10 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063F198D28513961004E572E /* NavConfigurator.swift in Sources */,
 				063F195428510751004E572E /* ContentView.swift in Sources */,
 				063F195228510751004E572E /* ImageSearcherApp.swift in Sources */,
 				063F19812851082A004E572E /* ImageSearcherHit.swift in Sources */,
 				063F198428513421004E572E /* ImageSearcherResult.swift in Sources */,
+				063F198B28513834004E572E /* ImageSearcherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
