@@ -15,40 +15,56 @@ struct ImageSearcherView: View {
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
-                VStack(spacing: 0) {
-                    Spacer()
-                        .frame(height: geometry.size.height / 2 - 220)
+                ZStack {
+                    ImageSearcherViewSafeAreaBackgroundColorView.init()
                     
-                    Text("Search for photos")
-                    
-                    Spacer().frame(height: 10)
-                    
-                    ImageSearcherViewSearchTextField.init(searchText: $searchText, placeholder: .constant("Search for an image, e.g. flowers"))
-                    
-                    Spacer().frame(height: 25)
-                    
-                    HStack {
+                    VStack(spacing: 0) {
                         Spacer()
+                            .frame(height: geometry.size.height / 2 - 120)
                         
-                        Button {
-                            print("button clicked!")
-                        } label: {
-                            Group {
-                                Text("Search Now")
-                                    .foregroundColor(.white)
+                        Text("Search for photos")
+                        
+                        Spacer().frame(height: 10)
+                        
+                        ImageSearcherViewSearchTextField.init(searchText: $searchText, placeholder: .constant("Search for an image, e.g. flowers"))
+                        
+                        Spacer().frame(height: 25)
+                        
+                        HStack {
+                            Spacer()
+                            
+                            Button {
+                                print("button clicked!")
+                            } label: {
+                                Group {
+                                    Text("Search Now")
+                                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                }
+                                .padding(20)
+                                .background(Color("CustomColor"))
+                                .cornerRadius(16)
                             }
-                            .padding(16)
-                            .background(.blue)
-                            .cornerRadius(16)
+                            
+                            Spacer()
                         }
                         
                         Spacer()
-                    }
-                    
-                    Spacer()
+                    } 
                 }
                 .navigationTitle("Home")
-                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitleDisplayMode(.inline) 
+            }
+        }
+    }
+}
+
+struct ImageSearcherViewSafeAreaBackgroundColorView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            VStack {
+                Color("CustomColor").frame(height: geometry.safeAreaInsets.top, alignment: .top).ignoresSafeArea()
             }
         }
     }

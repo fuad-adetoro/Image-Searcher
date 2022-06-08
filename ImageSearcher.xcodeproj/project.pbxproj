@@ -15,7 +15,8 @@
 		063F19812851082A004E572E /* ImageSearcherHit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19802851082A004E572E /* ImageSearcherHit.swift */; };
 		063F198428513421004E572E /* ImageSearcherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F198328513421004E572E /* ImageSearcherResult.swift */; };
 		063F198B28513834004E572E /* ImageSearcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F198A28513834004E572E /* ImageSearcherView.swift */; };
-		063F198D28513961004E572E /* NavConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F198C28513961004E572E /* NavConfigurator.swift */; };
+		063F199128514584004E572E /* ImageSearcherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F199028514584004E572E /* ImageSearcherViewModel.swift */; };
+		063F199428516496004E572E /* ImageSearcherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F199328516496004E572E /* ImageSearcherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,9 @@
 		063F19802851082A004E572E /* ImageSearcherHit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherHit.swift; sourceTree = "<group>"; };
 		063F198328513421004E572E /* ImageSearcherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherResult.swift; sourceTree = "<group>"; };
 		063F198A28513834004E572E /* ImageSearcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherView.swift; sourceTree = "<group>"; };
-		063F198C28513961004E572E /* NavConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavConfigurator.swift; sourceTree = "<group>"; };
+		063F198E28514224004E572E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		063F199028514584004E572E /* ImageSearcherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherViewModel.swift; sourceTree = "<group>"; };
+		063F199328516496004E572E /* ImageSearcherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		063F195028510751004E572E /* ImageSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				063F198E28514224004E572E /* Info.plist */,
 				063F197E2851076E004E572E /* Extensions */,
 				063F197B2851075A004E572E /* Model */,
 				063F197C2851075F004E572E /* View */,
@@ -112,6 +116,7 @@
 		063F197B2851075A004E572E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				063F199228516486004E572E /* ImageSearcherAPI */,
 				063F19822851340C004E572E /* ImageSearcherResult */,
 				063F197F285107FB004E572E /* ImageSearcherHit */,
 			);
@@ -129,6 +134,7 @@
 		063F197D28510763004E572E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				063F198F28514578004E572E /* ImageSearcherViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -136,7 +142,6 @@
 		063F197E2851076E004E572E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				063F198C28513961004E572E /* NavConfigurator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +168,22 @@
 				063F198A28513834004E572E /* ImageSearcherView.swift */,
 			);
 			path = ImageSearcherView;
+			sourceTree = "<group>";
+		};
+		063F198F28514578004E572E /* ImageSearcherViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				063F199028514584004E572E /* ImageSearcherViewModel.swift */,
+			);
+			path = ImageSearcherViewModel;
+			sourceTree = "<group>";
+		};
+		063F199228516486004E572E /* ImageSearcherAPI */ = {
+			isa = PBXGroup;
+			children = (
+				063F199328516496004E572E /* ImageSearcherAPI.swift */,
+			);
+			path = ImageSearcherAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,12 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063F198D28513961004E572E /* NavConfigurator.swift in Sources */,
 				063F195428510751004E572E /* ContentView.swift in Sources */,
 				063F195228510751004E572E /* ImageSearcherApp.swift in Sources */,
 				063F19812851082A004E572E /* ImageSearcherHit.swift in Sources */,
 				063F198428513421004E572E /* ImageSearcherResult.swift in Sources */,
 				063F198B28513834004E572E /* ImageSearcherView.swift in Sources */,
+				063F199428516496004E572E /* ImageSearcherAPI.swift in Sources */,
+				063F199128514584004E572E /* ImageSearcherViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +440,7 @@
 				DEVELOPMENT_TEAM = T4LCWHVG69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageSearcher/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +470,7 @@
 				DEVELOPMENT_TEAM = T4LCWHVG69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageSearcher/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
