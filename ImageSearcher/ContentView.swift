@@ -8,37 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var imageSearcherResults: [ImageSearcherResult] = .init()
-    @State var reloadView = false
-    
-    func parse(json: Data) {
-        let decoder = JSONDecoder.init()
-        
-        if let imageSearcherHit = try? decoder.decode(ImageSearcherHit.self, from: json) {
-            imageSearcherResults = imageSearcherHit.hits
-            
-            reloadView = true
-        }
-        
-        print("RESULTS: \(imageSearcherResults.count)")
-    }
+    let numOfItems = 10
+    let numOfColumns = 3
+    let spacing: CGFloat = 10
     
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Text("Hello, world!!!!")
-                    .padding()
-                    .onAppear {
-                        print("APPEARED!!")
-                        
-                        let url = URL(string: "https://pixabay.com/api/?key=13197033-03eec42c293d2323112b4cca6&q=yellow+flowers&i")!
-                        
-                        if let data = try? Data(contentsOf: url) {
-                            parse(json: data)
-                        }
-                    }
+        GeometryReader { g in
+            let columns = Array(repeating: GridItem(.adaptive(minimum: 90, maximum: 180)), count: numOfColumns)
+            let numOfRows: Int = Int(ceil(Double(numOfItems) / Double(numOfColumns)))
+            let height: CGFloat = (g.size.height - (spacing * CGFloat(numOfRows - 1))) / CGFloat(numOfRows)
+
+            LazyVGrid(columns: columns, alignment: .leading, spacing: spacing) {
+                ForEach(0..<numOfItems, id: \.self) { object in
+                    MyView().frame(minHeight: height, maxHeight: .infinity)
+                }
             }
         }
+    }}
+
+struct MyView: View {
+    var body: some View {
+        Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1))
     }
 }
 

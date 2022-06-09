@@ -10,27 +10,40 @@ import XCTest
 
 class ImageSearcherTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testQueryString() {
+        let searchText = "Blue Flowers"
+        
+        XCTAssertEqual(searchText.mediaQuery, "Blue+Flowers")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testCleanedString() {
+        let searchText = "Or@nges"
+        
+        XCTAssertEqual(searchText.cleaned, "Ornges")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testCleanAndQueryString() {
+        let searchText = "Blue$$$$ Flowers".cleaned.mediaQuery
+        
+        XCTAssertEqual(searchText, "Blue+Flowers")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testParser() {
+        let data = MockJSON.shared.retrieveData()
+        
+        let imageSearchData = ImageSearcherAPI.shared.parse(json: data)
+        
+        XCTAssertEqual(imageSearchData.count, 1)
+    }
+    
+    func testMockDataFirstResult() {
+        let data = MockJSON.shared.retrieveData()
+        
+        let imageSearchData = ImageSearcherAPI.shared.parse(json: data)
+        
+        let firstResult = imageSearchData[0]
+        
+        XCTAssertEqual(firstResult.id, 3092912)
     }
 
 }

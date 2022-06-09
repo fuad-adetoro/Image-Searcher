@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06014E91285213F400EF4B81 /* MockJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06014E90285213F400EF4B81 /* MockJson.swift */; };
 		063F195228510751004E572E /* ImageSearcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F195128510751004E572E /* ImageSearcherApp.swift */; };
 		063F195428510751004E572E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F195328510751004E572E /* ContentView.swift */; };
 		063F195628510753004E572E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063F195528510753004E572E /* Assets.xcassets */; };
@@ -19,6 +20,11 @@
 		063F199428516496004E572E /* ImageSearcherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F199328516496004E572E /* ImageSearcherAPI.swift */; };
 		063F199628516D6A004E572E /* String+mediaQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F199528516D6A004E572E /* String+mediaQuery.swift */; };
 		063F19982851DB08004E572E /* String+cleaned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19972851DB08004E572E /* String+cleaned.swift */; };
+		063F19A42851F518004E572E /* ImageSearcherResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19A32851F518004E572E /* ImageSearcherResultsView.swift */; };
+		063F19A82851FD8E004E572E /* AsyncronousImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19A72851FD8E004E572E /* AsyncronousImage.swift */; };
+		063F19AC2851FDF0004E572E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19AB2851FDF0004E572E /* ImageCache.swift */; };
+		063F19AF2851FE1C004E572E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19AE2851FE1C004E572E /* ImageLoader.swift */; };
+		063F19B22851FE42004E572E /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19B12851FE42004E572E /* EnvironmentValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06014E90285213F400EF4B81 /* MockJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJson.swift; sourceTree = "<group>"; };
 		063F194E28510751004E572E /* ImageSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		063F195128510751004E572E /* ImageSearcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherApp.swift; sourceTree = "<group>"; };
 		063F195328510751004E572E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		063F199328516496004E572E /* ImageSearcherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherAPI.swift; sourceTree = "<group>"; };
 		063F199528516D6A004E572E /* String+mediaQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+mediaQuery.swift"; sourceTree = "<group>"; };
 		063F19972851DB08004E572E /* String+cleaned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+cleaned.swift"; sourceTree = "<group>"; };
+		063F19A32851F518004E572E /* ImageSearcherResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherResultsView.swift; sourceTree = "<group>"; };
+		063F19A72851FD8E004E572E /* AsyncronousImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncronousImage.swift; sourceTree = "<group>"; };
+		063F19AB2851FDF0004E572E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		063F19AE2851FE1C004E572E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		063F19B12851FE42004E572E /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06014E8F285213DD00EF4B81 /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				06014E90285213F400EF4B81 /* MockJson.swift */,
+			);
+			path = MockJson;
+			sourceTree = "<group>";
+		};
 		063F194528510751004E572E = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +150,7 @@
 		063F197C2851075F004E572E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				063F19A22851F506004E572E /* ImageSearcherResultsView */,
 				063F198728513800004E572E /* ImageSearcherView */,
 			);
 			path = View;
@@ -146,8 +167,9 @@
 		063F197E2851076E004E572E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				063F199528516D6A004E572E /* String+mediaQuery.swift */,
-				063F19972851DB08004E572E /* String+cleaned.swift */,
+				06014E8F285213DD00EF4B81 /* MockJson */,
+				063F19A62851FD65004E572E /* AsyncronousImage */,
+				063F19A52851FD5B004E572E /* String+ */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +212,66 @@
 				063F199328516496004E572E /* ImageSearcherAPI.swift */,
 			);
 			path = ImageSearcherAPI;
+			sourceTree = "<group>";
+		};
+		063F19A22851F506004E572E /* ImageSearcherResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				063F19A32851F518004E572E /* ImageSearcherResultsView.swift */,
+			);
+			path = ImageSearcherResultsView;
+			sourceTree = "<group>";
+		};
+		063F19A52851FD5B004E572E /* String+ */ = {
+			isa = PBXGroup;
+			children = (
+				063F19972851DB08004E572E /* String+cleaned.swift */,
+				063F199528516D6A004E572E /* String+mediaQuery.swift */,
+			);
+			path = "String+";
+			sourceTree = "<group>";
+		};
+		063F19A62851FD65004E572E /* AsyncronousImage */ = {
+			isa = PBXGroup;
+			children = (
+				063F19B02851FE31004E572E /* EnvironmentValues */,
+				063F19AD2851FE0E004E572E /* ImageLoader */,
+				063F19AA2851FDDB004E572E /* ImageCache */,
+				063F19A92851FDB9004E572E /* AsyncImage */,
+			);
+			path = AsyncronousImage;
+			sourceTree = "<group>";
+		};
+		063F19A92851FDB9004E572E /* AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				063F19A72851FD8E004E572E /* AsyncronousImage.swift */,
+			);
+			path = AsyncImage;
+			sourceTree = "<group>";
+		};
+		063F19AA2851FDDB004E572E /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				063F19AB2851FDF0004E572E /* ImageCache.swift */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
+		063F19AD2851FE0E004E572E /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				063F19AE2851FE1C004E572E /* ImageLoader.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		063F19B02851FE31004E572E /* EnvironmentValues */ = {
+			isa = PBXGroup;
+			children = (
+				063F19B12851FE42004E572E /* EnvironmentValues.swift */,
+			);
+			path = EnvironmentValues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +380,15 @@
 				063F19812851082A004E572E /* ImageSearcherHit.swift in Sources */,
 				063F198428513421004E572E /* ImageSearcherResult.swift in Sources */,
 				063F198B28513834004E572E /* ImageSearcherView.swift in Sources */,
+				063F19AC2851FDF0004E572E /* ImageCache.swift in Sources */,
+				063F19B22851FE42004E572E /* EnvironmentValues.swift in Sources */,
 				063F19982851DB08004E572E /* String+cleaned.swift in Sources */,
+				06014E91285213F400EF4B81 /* MockJson.swift in Sources */,
 				063F199428516496004E572E /* ImageSearcherAPI.swift in Sources */,
+				063F19A42851F518004E572E /* ImageSearcherResultsView.swift in Sources */,
 				063F199128514584004E572E /* ImageSearcherViewModel.swift in Sources */,
+				063F19A82851FD8E004E572E /* AsyncronousImage.swift in Sources */,
+				063F19AF2851FE1C004E572E /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,8 +540,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,8 +571,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

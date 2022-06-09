@@ -12,6 +12,7 @@ public class ImageSearcherViewModel: ObservableObject {
     
     @Published var isLoading = false
     @Published var errorLoading = false
+    @Published var isLoaded = false
     @Published var imageSearcherResults: [ImageSearcherResult] = []
     
     func searchForImages(searchText: String) {
@@ -19,6 +20,8 @@ public class ImageSearcherViewModel: ObservableObject {
         let searchQuery = searchTextCleaned.mediaQuery
         
         self.isLoading = true
+        self.isLoaded = false
+        self.errorLoading = false 
         
         ImageSearcherAPI.shared.searchForImages(using: searchQuery) { [weak self] imageSearcherResults, error in
             DispatchQueue.main.async {
@@ -39,6 +42,7 @@ public class ImageSearcherViewModel: ObservableObject {
         DispatchQueue.main.async { [weak self] in
             self?.imageSearcherResults = []
             self?.errorLoading = true
+            self?.isLoaded = true
         }
     }
     
@@ -46,6 +50,7 @@ public class ImageSearcherViewModel: ObservableObject {
         DispatchQueue.main.async { [weak self] in
             self?.errorLoading = false
             self?.imageSearcherResults = imageSearcherResults
+            self?.isLoaded = true 
         }
     }
 }

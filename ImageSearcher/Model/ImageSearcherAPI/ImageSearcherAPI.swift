@@ -63,7 +63,7 @@ public class ImageSearcherAPI {
     }
     
     // Parsing Data to 'ImageSearcherResults' array...
-    private func parse(json: Data) -> [ImageSearcherResult] {
+    func parse(json: Data) -> [ImageSearcherResult] {
         let decoder = JSONDecoder.init()
         
         var imageSearcherResults: [ImageSearcherResult] = .init()
