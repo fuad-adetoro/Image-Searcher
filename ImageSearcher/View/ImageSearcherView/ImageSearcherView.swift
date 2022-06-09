@@ -16,6 +16,8 @@ struct ImageSearcherView: View {
     
     @State private var pushToResultsView = false
     
+    @State private var showingErrorAlert = false
+    
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
@@ -25,10 +27,8 @@ struct ImageSearcherView: View {
                     if !viewModel.isLoading && !viewModel.errorLoading {
                         ImageSearcherSearchView(searchText: $searchText)
                             .environmentObject(viewModel)
-                    } else if viewModel.errorLoading {
-                        Text("Error Loading")
                     } else if viewModel.isLoading {
-                        Text("LOADING!")
+                        ImageSearcherSearchingView()
                     }
                     
                     NavigationLink(destination: ImageSearcherResultsView().environmentObject(viewModel), isActive: self.$pushToResultsView) {
@@ -37,9 +37,22 @@ struct ImageSearcherView: View {
                 }
                 .navigationTitle("Home")
                 .navigationBarTitleDisplayMode(.inline)
+            } 
+            .alert(isPresented: $showingErrorAlert) {
+                Alert(
+                    title: Text("Error!"),
+                    message: Text("Something went wrong... please try again."),
+                    dismissButton: .default(Text("Okay!")
+                ))
             }
+            .onChange(of: viewModel.errorLoading, perform: { newValue in
+                if newValue {
+                    self.showingErrorAlert = true
+                    viewModel.errorLoading = false
+                }
+            })
             .onChange(of: viewModel.isLoaded) { newValue in
-                if viewModel.isLoaded {
+                if newValue {
                     viewModel.isLoaded = false
                     
                     self.pushToResultsView = true
@@ -58,6 +71,37 @@ struct SafeAreaBackgroundColorView: View {
             VStack {
                 $color.wrappedValue.frame(height: geometry.safeAreaInsets.top, alignment: .top).ignoresSafeArea()
             }
+        }
+    }
+}
+
+struct ImageSearcherSearchingView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+            
+            HStack {
+                Spacer()
+                
+                Text("Loading...")
+                    .font(.title3)
+                    .fontWeight(.medium)
+                
+                Spacer()
+            }
+            
+            Spacer().frame(height: 20)
+            
+            HStack {
+                Spacer()
+                
+                ProgressView()
+                    .progressViewStyle(.circular)
+                
+                Spacer()
+            }
+            
+            Spacer()
         }
     }
 }

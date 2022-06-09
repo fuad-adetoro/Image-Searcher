@@ -44,6 +44,7 @@ class ImageSearcherTests: XCTestCase {
         let firstResult = imageSearchData[0]
         
         XCTAssertEqual(firstResult.id, 3092912)
+        XCTAssertEqual(firstResult.largeImageURL, "https://pixabay.com/get/g53e773f519f859d0610d32023a2a0a5fa8aef8f6bdd5f20cffadf0c1d806a40ee1dd60998400b49dccfb99e5b65bf46b18e7388c97783326268ddee3145735b8_1280.jpg")
     }
 
 }
