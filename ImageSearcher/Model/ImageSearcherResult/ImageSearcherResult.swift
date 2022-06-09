@@ -10,4 +10,5 @@ import Foundation
 public struct ImageSearcherResult: Codable, Identifiable {
     public var id: Int
     public var largeImageURL: String
+    //pu
 }
