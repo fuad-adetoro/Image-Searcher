@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06014E91285213F400EF4B81 /* MockJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06014E90285213F400EF4B81 /* MockJson.swift */; };
+		06014E9528521AFA00EF4B81 /* HelperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06014E9428521AFA00EF4B81 /* HelperViews.swift */; };
 		063F195228510751004E572E /* ImageSearcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F195128510751004E572E /* ImageSearcherApp.swift */; };
-		063F195428510751004E572E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F195328510751004E572E /* ContentView.swift */; };
 		063F195628510753004E572E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063F195528510753004E572E /* Assets.xcassets */; };
 		063F195928510753004E572E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063F195828510753004E572E /* Preview Assets.xcassets */; };
 		063F196328510753004E572E /* ImageSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F196228510753004E572E /* ImageSearcherTests.swift */; };
@@ -39,9 +39,9 @@
 
 /* Begin PBXFileReference section */
 		06014E90285213F400EF4B81 /* MockJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJson.swift; sourceTree = "<group>"; };
+		06014E9428521AFA00EF4B81 /* HelperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViews.swift; sourceTree = "<group>"; };
 		063F194E28510751004E572E /* ImageSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		063F195128510751004E572E /* ImageSearcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherApp.swift; sourceTree = "<group>"; };
-		063F195328510751004E572E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		063F195528510753004E572E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		063F195828510753004E572E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		063F195E28510753004E572E /* ImageSearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSearcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +87,14 @@
 			path = MockJson;
 			sourceTree = "<group>";
 		};
+		06014E9328521AEC00EF4B81 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				06014E9428521AFA00EF4B81 /* HelperViews.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
 		063F194528510751004E572E = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +122,6 @@
 				063F197C2851075F004E572E /* View */,
 				063F197D28510763004E572E /* ViewModel */,
 				063F195128510751004E572E /* ImageSearcherApp.swift */,
-				063F195328510751004E572E /* ContentView.swift */,
 				063F195528510753004E572E /* Assets.xcassets */,
 				063F195728510753004E572E /* Preview Content */,
 			);
@@ -150,6 +157,7 @@
 		063F197C2851075F004E572E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06014E9328521AEC00EF4B81 /* HelperViews */,
 				063F19A22851F506004E572E /* ImageSearcherResultsView */,
 				063F198728513800004E572E /* ImageSearcherView */,
 			);
@@ -374,7 +382,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063F195428510751004E572E /* ContentView.swift in Sources */,
 				063F195228510751004E572E /* ImageSearcherApp.swift in Sources */,
 				063F199628516D6A004E572E /* String+mediaQuery.swift in Sources */,
 				063F19812851082A004E572E /* ImageSearcherHit.swift in Sources */,
@@ -384,6 +391,7 @@
 				063F19B22851FE42004E572E /* EnvironmentValues.swift in Sources */,
 				063F19982851DB08004E572E /* String+cleaned.swift in Sources */,
 				06014E91285213F400EF4B81 /* MockJson.swift in Sources */,
+				06014E9528521AFA00EF4B81 /* HelperViews.swift in Sources */,
 				063F199428516496004E572E /* ImageSearcherAPI.swift in Sources */,
 				063F19A42851F518004E572E /* ImageSearcherResultsView.swift in Sources */,
 				063F199128514584004E572E /* ImageSearcherViewModel.swift in Sources */,

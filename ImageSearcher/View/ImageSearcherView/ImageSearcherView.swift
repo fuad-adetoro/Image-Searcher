@@ -37,7 +37,7 @@ struct ImageSearcherView: View {
                 }
                 .navigationTitle("Home")
                 .navigationBarTitleDisplayMode(.inline)
-            } 
+            }
             .alert(isPresented: $showingErrorAlert) {
                 Alert(
                     title: Text("Error!"),
@@ -59,18 +59,6 @@ struct ImageSearcherView: View {
                 }
             }
             .accentColor(colorScheme == .dark ? .white : .black)
-        }
-    }
-}
-
-struct SafeAreaBackgroundColorView: View {
-    @Binding var color: Color
-    
-    var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                $color.wrappedValue.frame(height: geometry.safeAreaInsets.top, alignment: .top).ignoresSafeArea()
-            }
         }
     }
 }
@@ -165,18 +153,6 @@ struct ImageSearcherViewSearchTextField: View {
                 
                 Spacer().frame(width: 20)
             }
-        }
-    }
-}
-
-struct SearchTextField: View {
-    @Binding var text: String
-    @Binding var placeholder: String
-    
-    var body: some View {
-        VStack {
-            TextField.init($placeholder.wrappedValue, text: $text)
-                .textFieldStyle(.roundedBorder)
         }
     }
 }
