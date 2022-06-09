@@ -12,6 +12,8 @@ struct ImageSearcherView: View {
     
     @State private var searchText: String = ""
     
+    @ObservedObject private var viewModel = ImageSearcherViewModel.shared
+    
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
@@ -34,7 +36,7 @@ struct ImageSearcherView: View {
                             Spacer()
                             
                             Button {
-                                print("button clicked!")
+                                viewModel.searchForImages(searchText: $searchText.wrappedValue)
                             } label: {
                                 Group {
                                     Text("Search Now")
@@ -51,7 +53,7 @@ struct ImageSearcherView: View {
                         }
                         
                         Spacer()
-                    } 
+                    }
                 }
                 .navigationTitle("Home")
                 .navigationBarTitleDisplayMode(.inline) 

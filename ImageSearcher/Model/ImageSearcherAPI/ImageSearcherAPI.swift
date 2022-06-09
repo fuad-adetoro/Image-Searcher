@@ -12,7 +12,7 @@ enum APIError: Error {
     case responseError
 }
 
-class ImageSearcherAPI {
+public class ImageSearcherAPI {
     static let shared = ImageSearcherAPI()
     
     let apiURL = "https://pixabay.com/api/?key="
@@ -23,7 +23,7 @@ class ImageSearcherAPI {
         
         var request = URLRequest(url: url)
         
-        request.cachePolicy = .returnCacheDataDontLoad
+        request.cachePolicy = .returnCacheDataElseLoad
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard error == nil else {
@@ -55,8 +55,7 @@ class ImageSearcherAPI {
     }
     
     private func constructURL(using searchText: String) -> URL {
-        let constructedURL = "\(apiKey)\(apiKey)\(searchText)"
-        
+        let constructedURL = "\(apiURL)\(apiKey)&q=\(searchText)&image_type=photo" 
         
         let url = URL(string: constructedURL)!
         

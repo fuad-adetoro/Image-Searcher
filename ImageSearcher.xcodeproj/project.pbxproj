@@ -17,6 +17,8 @@
 		063F198B28513834004E572E /* ImageSearcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F198A28513834004E572E /* ImageSearcherView.swift */; };
 		063F199128514584004E572E /* ImageSearcherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F199028514584004E572E /* ImageSearcherViewModel.swift */; };
 		063F199428516496004E572E /* ImageSearcherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F199328516496004E572E /* ImageSearcherAPI.swift */; };
+		063F199628516D6A004E572E /* String+mediaQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F199528516D6A004E572E /* String+mediaQuery.swift */; };
+		063F19982851DB08004E572E /* String+cleaned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F19972851DB08004E572E /* String+cleaned.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		063F198E28514224004E572E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		063F199028514584004E572E /* ImageSearcherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherViewModel.swift; sourceTree = "<group>"; };
 		063F199328516496004E572E /* ImageSearcherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearcherAPI.swift; sourceTree = "<group>"; };
+		063F199528516D6A004E572E /* String+mediaQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+mediaQuery.swift"; sourceTree = "<group>"; };
+		063F19972851DB08004E572E /* String+cleaned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+cleaned.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 		063F197E2851076E004E572E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				063F199528516D6A004E572E /* String+mediaQuery.swift */,
+				063F19972851DB08004E572E /* String+cleaned.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,9 +294,11 @@
 			files = (
 				063F195428510751004E572E /* ContentView.swift in Sources */,
 				063F195228510751004E572E /* ImageSearcherApp.swift in Sources */,
+				063F199628516D6A004E572E /* String+mediaQuery.swift in Sources */,
 				063F19812851082A004E572E /* ImageSearcherHit.swift in Sources */,
 				063F198428513421004E572E /* ImageSearcherResult.swift in Sources */,
 				063F198B28513834004E572E /* ImageSearcherView.swift in Sources */,
+				063F19982851DB08004E572E /* String+cleaned.swift in Sources */,
 				063F199428516496004E572E /* ImageSearcherAPI.swift in Sources */,
 				063F199128514584004E572E /* ImageSearcherViewModel.swift in Sources */,
 			);

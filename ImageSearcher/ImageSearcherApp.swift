@@ -12,11 +12,7 @@ struct ImageSearcherApp: App {
     var body: some Scene {
         WindowGroup {
             ImageSearcherView()
-                .onAppear {
-                    ImageSearcherAPI.shared.searchForImages(using: "adfnoas") { result, error in
-                        print("ERROR: \(error) ... \(result)")
-                    }
-                }
+                //.preferredColorScheme(.dark)
         }
     }
 }
